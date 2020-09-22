@@ -3,13 +3,26 @@ public class Main {
     public static void main(String[] args) {
         CreditPaymentService service = new CreditPaymentService();
 
-        int years1 = service.calculate(12, 1_000_000, (float) 9.99);
+        int creditTerm;
+        int amount;
+        float percent = 9.99f;
+
+        creditTerm = 12;
+        amount = 1_000_000;
+
+        int years1 = service.calculate(creditTerm, amount, percent);
         System.out.println(years1);
 
-        int years2 = service.calculate(24, 1_000_000, (float) 9.99);
+        creditTerm = 24;
+        amount = 1_000_000;
+
+        int years2 = service.calculate(creditTerm, amount, percent);
         System.out.println(years2);
 
-        int years3 = service.calculate(36, 1_000_000, (float) 9.99);
+        creditTerm = 36;
+        amount = 1_000_000;
+
+        int years3 = service.calculate(creditTerm, amount, percent);
         System.out.println(years3);
     }
 }
